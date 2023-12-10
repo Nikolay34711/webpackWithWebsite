@@ -1,0 +1,147 @@
+.button{
+  min-width: fit-content;  
+  @include element-font-16;
+  font-weight: 200;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: transparent;
+  border: none;  
+  cursor: pointer;
+}
+
+.button_type--border{
+  height: 40px;
+  padding: 0.5rem 1rem;
+  background: $background-color;
+  color: $button-border-color;
+}
+.button_type--border:hover:not(:last-child) {
+  background: $white-color;
+  color: $button-border-color;
+  padding: 0.5rem 1rem;
+  border: 2px solid $active-border-button-color;
+  border-radius: 6px;
+}
+.button_type--border:focus:not(:last-child) {
+  background: $white-color;
+  color: $button-border-color;
+  padding: 0.5rem 1rem;
+  border: 2px solid $active-border-button-color;
+  border-radius: 6px;
+}
+
+.button_type--circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $button-circle-background;
+  transition: 0.25s;
+}
+.button_type--circle:hover {
+ opacity: 0.5;
+}
+.button_type--circle:focus {
+ opacity: 0.5;
+}
+.button-arrow{
+  color: $content-text-color;
+}
+.button-arrow::before{
+  @include arrow;
+  margin-top: 3px;
+  margin-right: -16px;
+}
+.button-arrow::after{
+  @include arrow;
+  margin-top: 10px;
+  margin-right: 16px;
+}
+.button-arrow--open::before{
+  transform: rotate(45deg) translate(0px,0px);
+}
+.button-arrow--open::after{
+  transform: rotate(45deg) translate(0px,0px);
+}
+
+.btn-more {
+  position: relative;
+  top: 10px;
+}
+
+.up-menu__button-burger {
+  background-image: url("#{$icon-path}/burger.svg");
+}
+.up-menu__button-call,
+.mobile-menu__button-call {
+  background-image: url("#{$icon-path}/call.svg");
+}
+.up-menu__button-chat,
+.mobile-menu__button-chat {
+  background-image: url("#{$icon-path}/chat.svg");
+}
+.up-menu__button-profile,
+.mobile-menu__button-profile {
+  background-image: url("#{$icon-path}/profile.svg");
+}
+.up-menu__button-repair {
+  background-image: url("#{$icon-path}/repair.svg");
+}
+.up-menu__button-checkstatus {
+  background-image: url("#{$icon-path}/checkstatus.svg");
+}
+.menu-small__button-repair {
+  background-image: url("#{$icon-path}/repair.svg");
+}
+.menu-small__button-checkstatus {
+  background-image: url("#{$icon-path}/checkstatus.svg");
+}
+.mobile-menu__button-close, .burger-menu__button-close {
+  background-image: url("#{$icon-path}/close.svg");
+}
+.mobile-menu__button-search, .burger-menu__button-search {
+  background-image: url("#{$icon-path}/search.svg");
+}
+
+.button_type_text{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 24px;
+  background: #FFF;
+  font-weight: 500;
+  z-index: 100;
+}
+.button_type_text:hover{
+  opacity: 0.5;
+}
+.button_type_text::after{
+  position: absolute;
+  content: attr(data-name);
+  @include element-font-24;
+  color: #82827e;
+  opacity: 0;
+  z-index: 99;
+}
+.button_type_text:hover{
+  opacity: 0.6;
+    
+}
+.button_type_text::before{
+  position: absolute;
+  opacity: 0;
+  content:"";
+  float:left;
+  width: 4px;
+  height: 32px;
+  left: 0px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  background: #41F6D7;
+}
+.button_type_text:hover::before{
+  opacity: 1;
+}
+.button__text {
+  color: #1b1c21;
+  font-weight: 500;
+}

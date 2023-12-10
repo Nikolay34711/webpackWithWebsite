@@ -1,0 +1,24 @@
+.services-panel {
+  display: flex;
+  justify-content: flex-start;
+  
+  .elements__item{
+    flex: 1 1 200px;
+  }
+}
+@media screen and (max-width: $mobile-size) {
+  .services-panel {    
+    .elements__item{
+      display: block;
+      min-width:240px;
+      width: auto;
+    }
+    .elements__item--fake{
+      display: none;
+    }
+    .panel__elements {
+      display: block;
+      height: 130px;
+    }
+  }
+}

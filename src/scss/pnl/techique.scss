@@ -1,0 +1,43 @@
+.technique-panel {
+  .elements__item {
+    flex: 1 1 200px;
+    
+    .element {
+      display: flex;
+      flex-direction: column;
+      height: 160px;
+      width: 100%;
+      border-radius: 5px;
+      gap: 1rem;
+      padding: 1rem 0.5rem;
+      
+      .element__header {
+        width: 100%;
+        align-self: flex-start;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $content-text-color;
+      }
+      .element__button {
+        align-self: flex-end;
+      }
+    }
+  }  
+}
+@media screen and (max-width: $mobile-size) {
+  .technique-panel {    
+    .elements__item{
+      display: block;
+      min-width:240px;
+      width: auto;
+    }
+    .elements__item--fake{
+      display: none;
+    }
+    .panel__elements {
+      display: block;
+      height: 230px;
+    }
+  }
+}

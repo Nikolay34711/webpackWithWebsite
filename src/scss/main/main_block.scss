@@ -1,0 +1,115 @@
+.main {
+  gap: 1.5rem;
+  background: $background-color;
+  padding-bottom: 2rem;
+  @include block-shadow-line;
+}
+.main__header {
+  @include display-flex(row);
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+.main__header::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 40px;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: $header-mark-color;
+}
+.header__text {
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  margin-left: 1rem;
+}
+.header__menu-small {
+  display: none;
+}
+.main__h-scroll-menu {
+  @include display-flex(row);
+  max-width: 1120px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  margin-left: 12px;
+  margin-top: 15px;
+}
+.main__h-scroll-menu::-webkit-scrollbar {
+  width: 0px;
+}
+
+.main__content {
+  @include display-flex(row);
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-inline: 1.5rem;
+}
+.content__article {
+  @include display-flex(column);
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.content__article-paragraph {
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: $content-text-color;
+}
+
+.content__article-paragraph:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+.content__article-paragraph--read-more{
+  max-height: 70px;
+  overflow: hidden
+}
+
+.content__text-block {
+  @include display-flex(column);
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 0 0 50%;
+}
+.main__banner {
+  display: flex;
+  flex: 0 0 50%;
+  max-width: 40%;
+  border-radius: 0.5rem;
+  object-fit:contain;
+}
+
+.content__button-arrow {
+  margin-top: 1rem;
+  margin-left: 0rem;
+}
+
+@media screen and (max-width: 740px) {
+  .main {
+    gap: 2rem;
+  }
+  .main__content {
+    padding-inline: 0;
+    gap: 18px;
+  }
+  .content__text-block {
+    flex: 0 0 100%;
+    padding-inline: 1rem;
+  }
+  .main__banner {
+    flex: 0 0 100%;    
+    max-width: 100%;
+  }
+
+}

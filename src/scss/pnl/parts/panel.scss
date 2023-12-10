@@ -1,0 +1,58 @@
+.panel {
+  background-color: $background-color;
+  --pad-left: 1rem;
+  @include display-flex(column);
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  @include block-shadow-line;
+}
+.panel__header {
+  @include display-flex(row);
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(to right, $background-color, $white-color);
+}
+.panel__header-text {
+  text-transform: uppercase;
+  @include element-font-16;
+  margin: 1rem;
+  margin-left: var(--pad-left);
+  color: $button-border-color;
+}
+.panel__elements {
+  @include display-flex(column);
+  width: 100%;
+  gap: 1rem;
+}
+.panel__paginator--hide {
+  display: none;
+}
+.panel__button-arrow {
+  margin-left: 2rem;
+}
+.panel__elements--large {
+  @include display-flex(row);
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  transition-duration: 1s;
+}
+.panel__elements-large--close {
+  height: calc(72px * 2 + 1.2rem);
+}
+.wrapper-large {
+  margin-inline: 1rem;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: stretch;
+  overflow: hidden;
+}

@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "TT Lakes";
+  src: url("#{$font-path}/TTLakes-Regular.woff") format("woff"),
+       url("#{$font-path}/TTLakes-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("#{$font-path}/TTLakes-Medium.woff") format("woff"),
+       url("#{$font-path}/TTLakes-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("#{$font-path}/TTLakes-Bold.woff") format("woff"),
+       url("#{$font-path}/TTLakes-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+}
+
+:root {
+  font-family: "TT Lakes";
+  font-size: $root-font-size;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-inline: auto;
+  min-width: $page-min-width;
+  max-width: $page-max-width;
+  min-height: $page-min-height;  
+  padding-bottom: 1rem;
+  background: $white-color;
+}
+.info-content{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-inline: auto;
+  min-width: $page-min-width;
+  max-width: $page-max-width;
+  min-height: $page-min-height;
+  padding-bottom: 1rem;
+  background: $background-color;
+}

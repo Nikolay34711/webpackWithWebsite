@@ -1,0 +1,58 @@
+.elements__item { 
+  display: flex;
+  
+  .element {
+    @include display-flex(row);
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+    border: 1px solid $divider-color;
+    background: $white-color;
+    height: 72px;
+    width: 100%;
+    border-radius: 5px;
+    gap: 1rem;
+
+    .element__image {
+      height: 40px;
+      width: 90px;
+      object-fit: contain;
+    }
+    .element__button {
+      width: 40px;
+      height: 40px;
+      border: 2px solid $button-circle-background;
+      border-radius: 50%;
+      background: $white-color;
+    }
+    .element__button::after {
+      position: relative;
+      display: block;
+      content: "";
+      width: 0.4rem;
+      height: 0.4rem;
+      border-top: 2px solid $button-circle-background;
+      border-right: 2px solid $button-circle-background;
+      transform: translateX(0.9rem) rotate(45deg);
+    }
+    .element__button:hover {
+      background-color: rgb(221, 103, 103);
+      opacity: 0.5;
+    }
+    .element__button:focus {
+      background-color: rgb(187, 76, 76);
+      opacity: 0.5;
+    }
+    .element__button--bc:hover {
+      background-color: rgb(0, 0, 0);
+    }
+    .element__button--bc:focus {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}
+.elements__item--fake{
+  visibility: hidden;
+}
+
+

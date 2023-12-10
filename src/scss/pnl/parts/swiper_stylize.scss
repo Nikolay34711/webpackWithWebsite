@@ -1,0 +1,17 @@
+ 
+.service-swiper, .technique-swiper, .price-swiper{
+  @include this_swiper
+}
+.swiper-wrapper {
+  margin-left: var(--pad-left);
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: $pagination-bullet-color;
+}
+.swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12px;
+  background-color: $pagination-bullet-active-color;
+}

@@ -1,0 +1,43 @@
+.footer {
+  @include display-flex(row);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 1rem;
+  gap: 1rem;
+
+  .footer-content {
+    @include display-flex(row);
+    align-items: center;
+    flex-basis: 0 0 30%;
+    @include element-font-14;
+    color: $button-border-color;
+
+    .footer__creator, .footer__politic {
+      min-width: 218px;
+    }
+
+    .footer__politic {
+      min-width: 214px;
+    }
+
+    .footer__info {
+      max-width: 330px;
+    }
+  }
+
+  @media screen and (max-width: $mobile-size) {
+    @include display-flex(row);
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .footer-content {
+      justify-content: center;
+      width: 100%;
+    }
+
+    .footer-text {
+      text-align: center;
+    }
+  }
+}

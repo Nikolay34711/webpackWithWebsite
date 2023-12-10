@@ -1,0 +1,127 @@
+.modal--open {
+  transition: 1s;
+  transform: translateX(0px);
+}
+.modal--close {
+  transition: 1s;
+  transform: translateX(110%);
+}
+.modal {
+  @include display-flex(column);
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: $white-color;
+  padding-inline: 1rem;
+  gap: 1rem;
+  max-width: 440px;
+  height: 100%;
+  @include modal-shadow;
+
+  .header {
+    @include display-flex(column);
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 1.5rem;
+    .header__text {
+      font-size: 24px;
+      line-height: 40px;
+      letter-spacing: -0.6px;
+      margin-left: 0;
+    }
+    .header__text::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 4px;
+      height: 40px;
+      background: $header-mark-color;
+      border-radius: 0px 4px 4px 0;
+      transform: translateX(-1rem);
+    }
+  }
+  .modal__form {
+    @include display-flex(column);
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+
+    .form__input {
+      height: 3rem;
+      border: 1px solid $divider-color;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      cursor: pointer;
+    }
+    .form__input:hover {
+     opacity: 0.5;
+    }
+    .form__input:focus {
+      border-color: $button-border-color;
+    }
+    .form__input::placeholder {
+      @include element-font-16;
+      color: $pagination-bullet-active-color;
+    }
+    .form__agreement {
+      @include element-font-14;
+      color: $button-border-color;
+    }
+    .form__link {
+      text-decoration: none;
+      color: $button-circle-background;
+    }
+    .form__submit {
+      align-self: flex-end;
+      @include element-font-12;
+      text-align: left;
+      text-transform: uppercase;
+      width: 136px;
+      height: 32px;
+      padding-left: 1.25rem;
+      padding-block: 0.25rem;
+      border-radius: 1rem;
+      border: none;
+      background-color: $button-circle-background;
+      color: $white-color;
+      cursor: pointer;
+    }
+
+    .form__submit::after {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-top: 3px solid $white-color;
+      border-left: 3px solid $white-color;
+      transform: translate(0.5rem, 0.5rem) rotate(135deg);
+    }
+  }
+}
+
+.feedback {
+  @include modal;
+
+  .modal {
+    .modal__form {
+      .input-message {
+        height: 118px;
+      }
+    }
+  }
+}
+
+.call {
+  @include modal;
+}
+
+@media screen and (min-width: 520px) {
+  .header {
+    .mobile-menu__button-close, .burger-menu__button-close {
+      position: absolute;
+      transform: translateX(-6rem);
+    }
+  }
+}
