@@ -1,14 +1,14 @@
 {
-  "homepage": "https://nikolay34711.github.io/gh-phages/",
+  "homepage": "https://Nikolay34711.github.io/final-webpack-block",
   "name": "b1.6wp",
   "version": "1.0.0",
   "description": "Hello KATA",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
-    "predeploy": "npm run build-dev",
-    "deploy": "gh-pages -d build-dev",
-    "build-dev": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "build": "webpack",
     "build-prod": "webpack --node-env=production",
     "clear": "rd /s /q dist"
   },
