@@ -800,20 +800,19 @@ button.swiper-pagination-bullet {
   height: 40px;
   padding: 0.5rem 1rem;
   background: #F8F8F8;
-  color: #7E7E82; }
+  color: #7E7E82;
+  border: 2px solid transparent; }
 
 .button_type--border:hover:not(:last-child) {
   background: #FFFFFF;
   color: #7E7E82;
-  padding: 0.5rem 1rem;
-  border: 2px solid #B8FFEC;
-  border-radius: 6px; }
+  border-radius: 6px;
+  border: 2px solid #41F6D7; }
 
 .button_type--border:focus:not(:last-child) {
   background: #FFFFFF;
   color: #7E7E82;
-  padding: 0.5rem 1rem;
-  border: 2px solid #B8FFEC;
+  border: 2px solid #41F6D7;
   border-radius: 6px; }
 
 .button_type--circle {
