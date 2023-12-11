@@ -14,19 +14,18 @@
   padding: 0.5rem 1rem;
   background: $background-color;
   color: $button-border-color;
+  border: 2px solid transparent;
 }
 .button_type--border:hover:not(:last-child) {
   background: $white-color;
   color: $button-border-color;
-  padding: 0.5rem 1rem;
-  border: 2px solid $active-border-button-color;
   border-radius: 6px;
+  border:2px solid $header-mark-color;
 }
 .button_type--border:focus:not(:last-child) {
   background: $white-color;
   color: $button-border-color;
-  padding: 0.5rem 1rem;
-  border: 2px solid $active-border-button-color;
+  border:2px solid $header-mark-color;
   border-radius: 6px;
 }
 
